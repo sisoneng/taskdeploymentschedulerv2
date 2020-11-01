@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/welcomeNameFragment">
+    <fragment
+        android:id="@+id/welcomeNameFragment"
+        android:name="com.example.taskdeploymentscheduler.activities.welcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeNameFragment_to_welcomeRoleFragment"
+            app:destination="@id/welcomeRoleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeRoleFragment"
+        android:name="com.example.taskdeploymentscheduler.activities.welcomeRoleFragment"
+        android:label="fragment_welcome_role"
+        tools:layout="@layout/fragment_welcome_role" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_welcomeRoleFragment_to_leaderHomeFragment"
+            app:destination="@id/leaderHomeFragment" />
+        <action
+            android:id="@+id/action_welcomeRoleFragment_to_memberHomeFragment"
+            app:destination="@id/memberHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaderHomeFragment"
+        android:name="com.example.taskdeploymentscheduler.activities.leaderHomeFragment"
+        android:label="fragment_leader_home"
+        tools:layout="@layout/fragment_leader_home" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_leaderHomeFragment_to_addtaskFragment"
+            app:destination="@id/addtaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberHomeFragment"
+        android:name="com.example.taskdeploymentscheduler.activities.memberHomeFragment"
+        android:label="fragment_member_home"
+        tools:layout="@layout/fragment_member_home" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addtaskFragment"
+        android:name="com.example.taskdeploymentscheduler.activities.addtaskFragment"
+        android:label="fragment_addtask"
+        tools:layout="@layout/fragment_addtask" >
+        <action
+            android:id="@+id/action_addtaskFragment_to_leaderHomeFragment"
+            app:destination="@id/leaderHomeFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+</navigation>

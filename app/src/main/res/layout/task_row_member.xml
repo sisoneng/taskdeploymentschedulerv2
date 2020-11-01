@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/secondaryLightColor"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/row_title_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/secondaryLightColor"
+                android:gravity="start"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:text="Task: Create app"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/row_status_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="25dp"
+                android:layout_weight="10"
+                android:background="@mipmap/task_complete" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/row_description_member"
+            android:padding="25dp"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:background="@color/secondaryLightColor"
+            android:textColor="@color/primaryDarkColor"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis pellentesque mauris, vel vehicula dui. Mauris feugiat hendrerit vulputate. Cras sit amet mi ipsum. In hac habitasse platea dictumst. Etiam purus mi, egestas et fringilla et, ullamcorper quis ligula. Pellentesque luctus varius porttitor." />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            >
+
+            <TextView
+                android:id="@+id/row_member_member"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_weight="2"
+                android:background="@color/secondaryLightColor"
+                android:gravity="start"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:text="For: Lebron James"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/row_deadline_member"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:background="@color/secondaryLightColor"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="16sp"
+                android:text="Deadline: 10/20/2020" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryLightColor"
+            android:textColor="@color/primaryTextColor"
+            android:text="Update Status" />
+    </LinearLayout>
+</ScrollView>
